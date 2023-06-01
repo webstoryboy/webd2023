@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* wrap */
+#wrap {
+    width: 1000px;
+    display: flex; 
+}
+
+/* aside */
+#aside {
+    width: 200px;
+    height: 650px;
+    background-color: #ebe1ff;
+}
+#aside h1 {
+    width: 100%;
+    padding: 20px;
+}
+#aside h1 a {
+    color: #58339E;
+}
+#aside .nav {
+    position: relative;
+    z-index: 100;
+}
+#aside .nav > ul > li {
+    text-align: center;
+    position: relative;
+}
+#aside .nav > ul > li > a {
+    display: inline-block;
+    background-color: #58339E;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+}
+#aside .nav > ul > li > a:hover {
+    background-color: #8258d1;
+}
+#aside .nav > ul > li > ul {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    width: 200px;
+    background-color: #fff;
+    display: none;
+}
+#aside .nav > ul > li > ul > li > a {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px 0;
+    width: 100%;
+}
+#aside .nav > ul > li > ul > li > a:hover {
+    background-color: #8258d1;
+    color: #fff;
+}
+
+/* main */
+#main {
+    width: 800px;
+    height: 650px;
+}
+
+/* slider */
+#slider {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+#slider .sliderWrap {
+    overflow: hidden;
+}
+#slider .sliderWrap .slider {
+    height: 350px;
+    position: relative;
+}
+#slider .sliderWrap .slider img {
+    width: 100%;
+    vertical-align: text-top;
+}
+#slider .sliderWrap .slider .text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    padding: 20px 40px;
+    width: 400px;
+}
+#slider .sliderWrap .slider .text h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+#slider .sliderWrap .slider .text h2 em {
+    font-style: normal;
+    color: rgb(188, 116, 255)
+}
+
+/* contents */
+#contents {
+    width: 800px;
+    display: flex;
+}
+
+/* contents : notice */
+#contents .notice {
+    width: 300px;
+    height: 200px;
+    background-color: #f9ddff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#contents .notice h3 {
+    margin-bottom: 10px;
+}
+#contents .notice ul li {
+    line-height: 1.6;
+    position: relative;
+    padding-left: 14px;
+}
+#contents .notice ul li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+#contents .notice ul li a:hover {
+    text-decoration: underline;
+}
+
+/* contents : gallery */
+#contents .gallery {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #e0bfff;
+}
+#contents .gallery h3 {
+    margin-bottom: 10px;
+}
+#contents .gallery ul {
+    display: flex;
+}
+#contents .gallery li {
+    margin-right: 8px;
+}
+#contents .gallery img {
+    width: 80px;
+}
+
+/* contents : banner */
+#contents .banner {
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/banner.jpg);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contents .banner h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+#contents .banner a {
+    background-color: #58339E;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+#contents .banner a:hover {
+    background-color: #7049b8;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #e69bff;
+    display: flex;
+    align-items: center;
+}
+#footer .footer1 {
+    width: 30%;
+    text-align: center;
+}
+#footer .footer1 h4 {
+    font-size: 20px;
+}
+#footer .footer2 {
+    width: 60%;
+}
+#footer .footer3 {
+    width: 30%;
+}
+#footer .footer3 select {
+    width: 90%;
+}
+
+/* popup */
+.popup-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: #D0AEF0;
+    display: none;
+    border: 4px solid #7636B1;
+    padding: 20px;
+}
+.popup-view h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.popup-view a {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    background-color: #7636B1;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+}

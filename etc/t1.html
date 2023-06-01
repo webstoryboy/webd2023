@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 슬라이드 T-1</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            display: flex;
+        }
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #efefef;
+        }
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #e3e3e3;
+        }
+        #slider {
+            width: 100%;
+            height: 300px;
+            background-color: #d9d9d9;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #d1d1d1;
+        }
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #c7c7c7;
+        }
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #bcbcbc;
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #b1b1b1;
+        }
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #a3a3a3;
+        }
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #9d9d9d;
+        }
+
+        /* tab-menu */
+        .tab-menu {
+            padding: 20px;
+        }
+        .tab-menu .tab-btn ul {
+            display: flex;
+        }
+        .tab-menu .tab-btn li {
+            list-style: none;
+        }
+        .tab-menu .tab-btn li.active a {
+            text-decoration: underline;
+        }
+        .tab-menu .tab-btn li a {
+            display: block;
+            padding: 10px;
+            background-color: #6b6b6b;
+        }
+        .tab-menu .tab-cont > div {
+            padding: 10px;
+            background-color: #b0b0b0;
+            line-height: 1.6;
+        }
+        /* .tab-menu .tab-cont > div:nth-child(2){
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </header>
+        <!-- //header -->
+    
+        <article id="slider">
+        </article>
+        <!-- //slider -->
+    
+        <main id="contents">
+            <section class="content1">
+                <div class="tab-menu">
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active"><a href="#">탭메뉴1</a></li>
+                            <li><a href="#">탭메뉴2</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont">
+                        <div>
+                            탭메뉴1<br>탭메뉴1<br>탭메뉴1<br>탭메뉴1
+                        </div>
+                        <div>
+                            탭메뉴2<br>탭메뉴2<br>탭메뉴2<br>탭메뉴2
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content2"></section>
+            <section class="content3"></section>
+        </main>
+        <!-- //contents -->
+    
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            let tabBtn = $(".tab-btn > ul > li");   //버튼 설정
+            let tabCont = $(".tab-cont > div");     //콘텐츠 설정
+            tabCont.hide().eq(0).show();    //첫번째 콘텐츠만 보이게 설정
+
+            tabBtn.click(function(){
+                const index = $(this).index();  //클릭한 번호를 저장
+                // alert(index);
+
+                $(this).addClass("active").siblings().removeClass("active");    //내가 클릭한 버튼에 클래스를 추가하고 나머지 버튼은 삭제
+                tabCont.eq(index).show().siblings().hide(); //내가 클릭한 버튼의 콘텐츠는 보여주고 나머지는 숨김
+            });
+        });
+    </script> -->
+    <script>
+        const tabBtn = document.querySelectorAll(".tab-btn > ul > li"); //버튼 설정
+        const tabCont = document.querySelectorAll(".tab-cont > div");   //콘텐츠 설정
+
+        tabCont.forEach(el => el.style.display = "none");   //모든 콘텐츠를 숨김
+        tabCont[0].style.display = "block";     //첫 번째 콘텐츠를 보이게 설정
+
+        tabBtn.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                tabBtn.forEach(tab => tab.classList.remove("active"));  //모든 버튼 클래스 삭제
+                tab.classList.add("active");        //클릭한 버튼만 클래스 추가
+
+                tabCont.forEach(cont => cont.style.display = "none");   //모든 콘텐츠를 숨기
+                tabCont[index].style.display = "block";     //클릭한 버튼의 콘텐츠 내용을 보여줌
+            });
+        });
+    </script>
+</body>
+</html>

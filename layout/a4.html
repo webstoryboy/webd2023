@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 레이아웃 A-4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            display: flex;
+        }
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #efefef;
+        }
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #e3e3e3;
+        }
+        #slider {
+            width: 100%;
+            height: 300px;
+            background-color: #d9d9d9;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #d1d1d1;
+        }
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #c7c7c7;
+        }
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #bcbcbc;
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 80%;
+        }
+        #footer .footer1 .footer1-1 {
+            width: 100%;
+            height: 50px;
+            background-color: #b1b1b1;
+        }
+        #footer .footer1 .footer1-2 {
+            width: 100%;
+            height: 50px;
+            background-color: #a3a3a3;
+        }
+        #footer .footer2 {
+            width: 20%;
+            height: 100px;
+            background-color: #9d9d9d;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </header>
+        <!-- //header -->
+
+        <article id="slider">
+        </article>
+        <!-- //slider -->
+
+        <main id="contents">
+            <section class="content1"></section>
+            <section class="content2"></section>
+            <section class="content3"></section>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="footer1">
+                <div class="footer1-1"></div>
+                <div class="footer1-2"></div>
+            </div>
+            <div class="footer2"></div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

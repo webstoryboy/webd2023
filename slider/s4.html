@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 슬라이드 S-4</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+        #wrap {
+            width: 100%;           
+        }
+        #main {
+            width: 100%;
+            height: calc(100vh - 120px);
+            background-color: #efefef;
+            display: flex;
+        }
+        #header {
+            width: 200px;
+            height: 100%;
+        }
+        #header h1 {
+            width: 100%;
+            height: 10%;
+            background-color: #e3e3e3;
+        }
+        #header nav {
+            width: 100%;
+            height: 90%;
+            background-color: #d9d9d9;
+        }
+        #contents {
+            width: 400px;
+            height: 100%;
+        }
+        #contents .banner {
+            width: 100%;
+            height: 15%;
+            background-color: #d1d1d1;
+        }
+        #contents .notice {
+            width: 100%;
+            height: 35%;
+            background-color: #c7c7c7;
+        }
+        #contents .gallery {
+            width: 100%;
+            height: 35%;
+            background-color: #bcbcbc;
+        }
+        #contents .link {
+            width: 100%;
+            height: 15%;
+            background-color: #b1b1b1;
+        }
+        #slider {
+            width: calc(100% - 600px);
+            height: 100%;
+            background-color: #a3a3a3;
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: 120px;
+            background-color: #9d9d9d;
+        }
+        #footer .footer2 {
+            width: 80%;
+        }
+        #footer .footer2 .footer2-1 {
+            width: 100%;
+            height: 60px;
+            background-color: #929292;
+        }
+        #footer .footer2 .footer2-2 {
+            width: 100%;
+            height: 60px;
+            background-color: #838383;
+        }
+
+        /* slider */
+        .sliderWrap {
+            position: relative;
+            height: 100%;
+        }
+        /* .sliderWrap > div {
+            display: none;
+        }
+        .sliderWrap > div:first-child {
+            display: block;
+        } */
+        .sliderWrap .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .sliderWrap .slider.s1 {
+            background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider04.jpg);
+        }
+        .sliderWrap .slider.s2 {
+            background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider05.jpg);
+        }
+        .sliderWrap .slider.s3 {
+            background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider06.jpg);
+        }
+        .sliderWrap .slider span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255,255,255,0.4);
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <h1></h1>
+                <nav></nav>
+            </header>
+            <!-- //header -->
+
+            <section id="contents">
+                <div class="banner"></div>
+                <div class="notice"></div>
+                <div class="gallery"></div>
+                <div class="link"></div>
+            </section>
+            <!-- //contents -->
+
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <span>이미지1</span>
+                    </div>
+                    <div class="slider s2">
+                        <span>이미지2</span>
+                    </div>
+                    <div class="slider s3">
+                        <span>이미지3</span>
+                    </div>
+                </div>
+            </article>
+            <!-- //slider -->
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2">
+                <div class="footer2-1"></div>
+                <div class="footer2-2"></div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <!-- <script>
+        $(function(){
+            let currentIndex = 0;
+            
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % 3 // 1 2 0 1 2 0 1 2 0
+
+                $(".slider").eq(currentIndex).fadeOut(1200);
+                $(".slider").eq(nextIndex).fadeIn(1200);
+
+                currentIndex = nextIndex;
+            }, 3000);
+        });
+    </script> -->
+    <script>
+        window.onload = function(){
+            let currentIndex = 0;   //현재 이미지   
+            const slider = document.querySelectorAll(".slider"); //각각의 이미지들
+            slider.forEach(el => el.style.opacity = "0");   //모든 이미지 투명도 0
+            slider[0].style.opacity = 1;    //첫번째 이미지는 투명도 1
+
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % slider.length;
+
+                slider[currentIndex].style.opacity = "0";
+                slider[nextIndex].style.opacity = "1";
+                slider.forEach(el => el.style.transition = "all 1s");
+
+                currentIndex = nextIndex;
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
