@@ -8,15 +8,15 @@
 레이아웃을 먼저 익히고, 스크립트를 외운다음, 최종 마무리 사이트로 마무리 하시면 됩니다. 
 감사합니다.
 
-재생목록 : https://youtube.com/playlist?list=PL4UVBBIc6giK95pWwwoTQP82aI9iGNo-g
-완성 미리 보기 : https://webstoryboy.github.io/webstoryboy/w_webd/index.html
-완성 디자인 보기 :  https://www.figma.com/file/iD3Ehm4HRhe16Vx6kxz3ob/%5B%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%EA%B0%80-%EC%8B%A4%EB%A0%A5%EC%9D%B4%EB%8B%A4%5D-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%9C%EC%9E%91%ED%8E%B8?type=design&node-id=26248%3A1098&t=CfKBEPG0lp6GJUNI-1
+재생목록 : https://youtube.com/playlist?list=PL4UVBBIc6giK95pWwwoTQP82aI9iGNo-g.   
+완성 미리 보기 : https://webstoryboy.github.io/webstoryboy/w_webd/index.html.    
+완성 디자인 보기 :  https://www.figma.com/file/iD3Ehm4HRhe16Vx6kxz3ob/%5B%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%EA%B0%80-%EC%8B%A4%EB%A0%A5%EC%9D%B4%EB%8B%A4%5D-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%9C%EC%9E%91%ED%8E%B8?type=design&node-id=26248%3A1098&t=CfKBEPG0lp6GJUNI-1.  
 
 ## 레이아웃 연습
-A1 유형 : 레이아웃 기본 유형1 : https://webstoryboy.co.kr/1870
-A2 유형 : 레이아웃 기본 유형2 : https://webstoryboy.co.kr/1871
-A3 유형 : 레이아웃 기본 유형3 : https://webstoryboy.co.kr/1872
-A4 유형 : 레이아웃 기본 유형4 : https://webstoryboy.co.kr/1873
+A1 유형 : 레이아웃 기본 유형1 : https://webstoryboy.co.kr/1870.   
+A2 유형 : 레이아웃 기본 유형2 : https://webstoryboy.co.kr/1871.   
+A3 유형 : 레이아웃 기본 유형3 : https://webstoryboy.co.kr/1872.  
+A4 유형 : 레이아웃 기본 유형4 : https://webstoryboy.co.kr/1873.  
 B1 유형 : 전체 영역이 들어간 레이아웃 유형1 : https://webstoryboy.co.kr/1874
 B2 유형 : 전체 영역이 들어간 레이아웃 유형2 : https://webstoryboy.co.kr/1875
 B3 유형 : 전체 영역이 들어간 레이아웃 유형3 : https://webstoryboy.co.kr/1876
