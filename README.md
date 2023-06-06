@@ -38,7 +38,7 @@ E4 유형 : 반응형 레이아웃 3단 유형4 : https://webstoryboy.co.kr/1889
 M1 유형 : 메뉴 가로 유형1 : https://webstoryboy.co.kr/1890.  
 M2 유형 : 메뉴 가로 유형2 : https://webstoryboy.co.kr/1891.  
 M3 유형 : 메뉴 가로 유형3 : https://webstoryboy.co.kr/1892.  
-M4 유형 : 메뉴 세로 유형1 : https://webstoryboy.co.kr/1893. 
+M4 유형 : 메뉴 세로 유형1 : https://webstoryboy.co.kr/1893.    
 M5 유형 : 메뉴 세로 유형2 : https://webstoryboy.co.kr/1894.  
 M6 유형 : 메뉴 세로 유형3 : https://webstoryboy.co.kr/1895.  
 S1 유형 : 슬라이드 페이드 유형 : https://webstoryboy.co.kr/1896.  
