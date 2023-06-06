@@ -1,21 +1,21 @@
 $(function(){
-    //이미지 슬라이드
-    let currentIndex = 0;   
-    $(".sliderWrap").append($(".slider").first().clone(true));   
- 
+    // 이미지 슬라이드
+    let currentIndex = 0;   //현재 이미지
+    $(".sliderWrap").append($(".slider").first().clone(true));
+
     setInterval(function(){
-        currentIndex++;    
+        currentIndex++;     //현재 이미지를 1씩 증가
         $(".sliderWrap").animate({marginLeft: -1200 * currentIndex}, 600);
 
         if(currentIndex == 3){
             setTimeout(function(){
-                $(".sliderWrap").animate({ marginLeft: 0},0);
+                $(".sliderWrap").animate({marginLeft:0}, 0);
                 currentIndex = 0;
             }, 700);
         }
     }, 3000);
 
-    //메뉴 
+    // 메뉴
     $(".nav > ul > li").mouseover(function(){
         $(".nav > ul > li > ul").stop().fadeIn(400);
         $("#header .container").addClass("on");
@@ -30,6 +30,6 @@ $(function(){
         $(".popup-view").show();
     });
     $(".popup-close").click(function(){
-        $(".popup-view").hide ();
+        $(".popup-view").hide();
     });
 });

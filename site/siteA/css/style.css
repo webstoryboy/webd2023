@@ -15,20 +15,21 @@ li {
 }
 img {
     vertical-align: top;
+    width: 100%;
 }
 
 /* wrap */
 #wrap {
-    position: relative;
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* header */
 #header {
     width: 100%;
     display: flex;
-    background-color: #0C51A6;
+    background-color: #0c51a6;
 }
 #header .logo {
     width: 20%;
@@ -36,8 +37,8 @@ img {
 }
 #header .logo a {
     display: inline-block;
-    padding: 30px 40px;
     color: #fff;
+    padding: 30px 40px;
 }
 #header .nav {
     width: 80%;
@@ -57,19 +58,18 @@ img {
 #header .nav > ul > li > a {
     color: #fff;
     padding: 15px 45px;
-    background: #0a4288;
+    background-color: #0a4288;
     display: block;
 }
 #header .nav > ul > li > a:hover {
-    background: #4e8ad4;
+    background-color: #126bd8;
 }
 #header .nav > ul > li > ul {
-    text-align: center;
-    background-color: #fff;
     position: absolute;
-    top: 50px; 
     left: 0;
+    background-color: #fff;
     width: 100%;
+    text-align: center;
     display: none;
 }
 #header .nav > ul > li > ul > li > a {
@@ -77,13 +77,14 @@ img {
     display: block;
 }
 #header .nav > ul > li > ul > li > a:hover {
-    background: #c0dcff;
+    background-color: #c0dcff;
 }
 
 /* slider */
 #slider {
     width: 100%;
     height: 300px;
+    background-color: #d9d9d9;
 }
 #slider .sliderWrap {
     position: relative;
@@ -102,9 +103,10 @@ img {
     background-color: rgba(0,0,0,0.4);
     padding: 20px 30px;
 }
-#slider .sliderWrap .slider .text h2 {
+#slider .sliderWrap .slider .text h2 { 
     color: #fff;
     font-size: 30px;
+    margin-bottom: 3px;
 }
 #slider .sliderWrap .slider .text p {
     color: #fff;
@@ -125,43 +127,44 @@ img {
     padding: 20px;
     box-sizing: border-box;
 }
-#contents .info h3 {
+#contents .info .info-menu {
     margin-bottom: 10px;
-    font-size: 22px;
 }
-#contents .info h3 a.active {
+#contents .info .info-menu a {
+    font-size: 24px;
+}
+#contents .info .info-menu a.active {
     text-decoration: underline;
 }
-#contents .info .notice li {
+#contents .info .info-cont .notice {
+    display: none;
+}
+#contents .info .info-cont .notice li {
     display: flex;
 }
-#contents .info .notice li a {
+#contents .info .info-cont .notice li a {
     width: 75%;
     font-size: 16px;
     line-height: 1.8;
 }
-#contents .info .notice li a:hover {
+#contents .info .info-cont .notice li a:hover {
     text-decoration: underline;
 }
-#contents .info .notice li span {
+#contents .info .info-cont .notice li span {
     width: 25%;
+    font-size: 16px;
+    line-height: 1.8;
     text-align: right;
 }
-#contents .info .gallery {
-    display: none;
-}
-#contents .info .gallery ul {
+#contents .info .info-cont .gallery ul {
     display: flex;
+    justify-content: space-between;
 }
-#contents .info .gallery li {
-    margin-right: 17px;
-    padding-top: 3px;
-}
-#contents .info .gallery li a {
-    display: block;
+#contents .info .info-cont .gallery ul li a {
     border: 2px solid transparent;
+    display: block;
 }
-#contents .info .gallery li a:hover {
+#contents .info .info-cont .gallery ul li a:hover {
     border-color: #0a4288;
 }
 
@@ -177,17 +180,19 @@ img {
 }
 #contents .banner h3 {
     color: #fff;
+    font-size: 26px;
 }
 #contents .banner a {
     background-color: rgba(0,0,0,0.4);
     padding: 10px 20px;
+    color: #fff;
     border-radius: 50px;
     margin-top: 10px;
-    color: #fff;
 }
 #contents .banner a:hover {
     background-color: rgba(0,0,0,1);
 }
+
 
 /* contents : link */
 #contents .link {
@@ -202,17 +207,18 @@ img {
 #contents .link a {
     width: 100px;
     height: 100px;
-    background-color: rgba(1, 52, 96, 0.81);
+    background-color: rgba(1, 52, 96, 0.8);
     display: block;
     border-radius: 50%;
     text-align: center;
+    color: #fff;
     line-height: 100px;
     margin: 0 auto;
-    color: #fff;
 }
 #contents .link a:hover {
     background-color: rgba(1, 52, 96, 1);
 }
+
 
 /* footer */
 #footer {
@@ -281,13 +287,12 @@ img {
     color: #0a4288;
     padding-bottom: 5px;
 }
-.popup-view a {
-    display: inline-block;
-    padding: 8px 20px;
-    color: #fff;
-    background-color: #0a4288;
+.popup-close {
     position: absolute;
     left: 50%;
     bottom: 20px;
-    transform: translate(-50%);
+    transform: translateX(-50%);
+    background-color: #0a4288;
+    color: #fff;
+    padding: 8px 20px;
 }

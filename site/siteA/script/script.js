@@ -1,10 +1,10 @@
 $(function(){
-    //슬라이드 : 페이드 효과
+    // 슬라이드 : 페이드 효과
     let currentIndex = 0;
-    $(".slider").hide().first().show(); 
+    $(".slider").hide().first().show();
 
     setInterval(function(){
-        let nextIndex = (currentIndex + 1) % 3;
+        let nextIndex = (currentIndex+1) % 3; 
 
         $(".slider").eq(currentIndex).fadeOut(1200);
         $(".slider").eq(nextIndex).fadeIn(1200);
@@ -20,12 +20,12 @@ $(function(){
         $(this).find(".submenu").stop().slideUp(200);
     });
 
-    // 탭 메뉴
+    // 탭메뉴
     const tabBtn = $(".info-menu > a");
     const tabCont = $(".info-cont > div");
     tabCont.hide().eq(0).show();
 
-    tabBtn.on("click", function(){
+    tabBtn.click(function(){
         const index = $(this).index();
 
         $(this).addClass("active").siblings().removeClass("active");
@@ -37,6 +37,6 @@ $(function(){
         $(".popup-view").show();
     });
     $(".popup-close").click(function(){
-        $(".popup-view").hide ();
+        $(".popup-view").hide();
     });
 });

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 슬라이드 S-1</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            display: flex;
+        }
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #efefef;
+        }
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #e3e3e3;
+        }
+        #slider {
+            width: 100%;
+            height: 300px;
+            background-color: #d9d9d9;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #d1d1d1;
+        }
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #c7c7c7;
+        }
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #bcbcbc;
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #b1b1b1;
+        }
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #a3a3a3;
+        }
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #9d9d9d;
+        }
+        /* slider */
+        .sliderWrap {
+            position: relative;
+        }
+        .sliderWrap > div {
+            display: none;
+        }
+        .sliderWrap > div:first-child {
+            display: block;
+        }
+        .sliderWrap .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .sliderWrap .slider img {
+            vertical-align: top;
+        }
+        .sliderWrap .slider span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0,0,0,0.4);
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        /* 자바스크립트용 CSS */
+        .sliderWrap > div {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </header>
+        <!-- //header -->
+
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="slider s1">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg" alt="이미지 설명">
+                    <span>이미지1</span>
+                </div>
+                <div class="slider s2">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg" alt="이미지 설명">
+                    <span>이미지2</span>
+                </div>
+                <div class="slider s3">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg" alt="이미지 설명">
+                    <span>이미지3</span>
+                </div>
+            </div>
+        </article>
+        <!-- //slider -->
+
+        <main id="contents">
+            <section class="content1"></section>
+            <section class="content2"></section>
+            <section class="content3"></section>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script>
+        $(function(){
+            let currentIndex = 0;   //현재 이미지
+            
+            setInterval(function(){     //3초에 한번씩 실행
+                let nextIndex = (currentIndex + 1) % 3; // 1 2 0 1 2 무한반복
+
+                $(".slider").eq(currentIndex).fadeOut(1200);    //첫번째 이미지 사라짐
+                $(".slider").eq(nextIndex).fadeIn(1200);        //두번째 이미지 나타남
+
+                currentIndex = nextIndex;  //두번째 인덱값을 현재 인덱값에 저장
+            }, 3000);
+        });
+    </script> -->
+
+    <script>
+        window.onload = function(){
+            let currentIndex = 0;   //현재 이미지
+            const slider = document.querySelectorAll(".slider");    //모든 이미지를 변수에 저장
+            slider.forEach(img => img.style.opacity ="0");  //모든 이미지를 투명하게
+            slider[0].style.opacity = "1";  //첫번째 이미지만 보이게
+
+            setInterval(() => { //3초에 한번씩 실행
+                let nextIndex = (currentIndex + 1) % slider.length; // 1 2 0 1 2 무한반복
+
+                slider[currentIndex].style.opacity = "0";   //첫번째 이미지 사라짐
+                slider[nextIndex].style.opacity = "1";      //두번째 이미지 나타남
+                slider.forEach(img => img.style.transition = "all 1s"); //이미지 애니메이션 추가
+
+                currentIndex = nextIndex; //두번째 인덱값을 현재 인덱값에 저장
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
